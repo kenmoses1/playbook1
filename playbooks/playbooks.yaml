@@ -2,4 +2,4 @@ name: my first playbook
   hosts: all
   tasks:
     - name: ping the machines
-     ping:
+      ping:
