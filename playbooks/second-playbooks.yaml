@@ -3,5 +3,5 @@ name: my first playbook
   tasks:
     - name: ping the machines
      ping:
-    - name: create a text file on the hosts
-      shell: 'touch kellanfile.txt'
+    - name: create a text file on all hosts
+      shell: 'touch kellan2file.txt'
