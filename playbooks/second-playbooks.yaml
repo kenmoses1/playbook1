@@ -2,6 +2,6 @@ name: my first playbook
   hosts: all
   tasks:
     - name: ping the machines
-     ping:
+      ping:
     - name: create a text file on all hosts
       shell: 'touch kellan2file.txt'
