@@ -1,0 +1,6 @@
+- name: Install NodeJS
+  hosts: all
+  tasks:
+    - name: update the cache
+      shell: 'apt update'
+  
