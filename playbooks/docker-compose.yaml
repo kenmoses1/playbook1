@@ -32,7 +32,7 @@ services:
 networks:
   yolo-ken-network:
     ipam:
-      driver: default
       config:
-        - subnet: 172.20.0.1
+        - driver: default
+          subnet: 172.20.0.1
         
