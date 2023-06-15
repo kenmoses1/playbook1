@@ -1,14 +1,14 @@
 version: '3'
 services:
   frontend:
-    image: {{ client image }}
+    image: "{{ client image }}"
     ports:
       - 3000:3003
     networks:
       yolo-ken-network:
         ipv4_address: 172.20.0.4
   backend:
-    image: {{ backend image }}
+    image: "{{ backend image }}"
     ports:
       - 5000:5000
     environment:
