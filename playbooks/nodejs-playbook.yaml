@@ -9,7 +9,7 @@
     - name: download nodejs
       shell: 'curl -sL https://deb.nodesource.com/setup_16.x | bash -'
     - name: install nodejs 
-       ansible.builtin.apt:
+      ansible.builtin.apt:
         name: nodejs
         state: present
        
