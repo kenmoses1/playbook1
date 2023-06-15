@@ -4,7 +4,7 @@
     - name: install packages 
       ansible.builtin.apt:
         name: 
-          - ca.certificates
+          - ca-certificates
           - curl
           - gnupg
         state: present
@@ -14,7 +14,7 @@
       ansible.builtin.apt_key:
         url: https://download.docker.com/linux/debian/gpg 
         state: present
-        
+
     - name: Add docker repository into sources list
       ansible.builtin.apt_repository:
         repo: deb https://download.docker.com/linux/debian bullseye stable
