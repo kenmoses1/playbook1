@@ -2,11 +2,12 @@ version: '3'
 services:
   frontend:
     image: "{{ client_image }}"
+    stdin_open: true
     ports:
       - 3000:3003
     networks:
       yolo-ken-network:
-        ipv4_address: 172.17.0.4
+        ipv4_address: 172.17.0.3
   backend:
     image: "{{ backend_image }}"
     ports:
@@ -18,7 +19,7 @@ services:
       - mongo
     networks:
       yolo-ken-network:
-        ipv4_address: 172.17.0.3    
+        ipv4_address: 172.17.0.2   
   mongo:
     image: mongo
     environment:
@@ -28,7 +29,7 @@ services:
       - 27017:27017
     networks:
       yolo-ken-network:
-        ipv4_address: 172.17.0.2
+        ipv4_address: 172.17.0.1
 
 networks:
   yolo-ken-network:
