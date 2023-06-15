@@ -1,14 +1,17 @@
 - name: Install NodeJS
   hosts: all
   tasks:
-    - name: update the cache
-      shell: 'apt update'
     - name: install curl 
-      shell: 'apt install curl'
+      ansible.builtin.apt:
+        name: curl
+        state: present
+        update_cache: yes
     - name: download nodejs
       shell: 'curl -sL https://deb.nodesource.com/setup_16.x | bash -'
     - name: install nodejs 
-      shell: 'apt install nodejs'
+       ansible.builtin.apt:
+        name: nodejs
+        state: present
        
   
   
