@@ -29,10 +29,11 @@ services:
     networks:
       yolo-ken-network:
         ipv4_address: 172.20.0.2
+
 networks:
   yolo-ken-network:
     ipam:
+      driver: default
       config:
-        - driver: default
-          subnet: 172.20.0.1
+        - subnet: 172.20.0.1
         
