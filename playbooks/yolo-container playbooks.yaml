@@ -22,7 +22,7 @@
       
     - name: copy docker-compose file from repo to folder
       ansible.builtin.template:
-        src: docker-compose.yaml
+        src: ./docker-compose.yaml
         dest: "{{ app_folder }}/docker-compose.yaml"
     
     - name: start the containers
