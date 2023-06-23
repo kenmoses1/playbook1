@@ -9,7 +9,7 @@ resource "docker_image" "image" {
 resource "docker_network" "private_network" {
   name = "my_private_network"
   ipam_config {
-    subnet = "172.11.0.0/16"
+    subnet = "172.110.0.0/16"
   }
 }
 
@@ -27,5 +27,5 @@ resource "docker_container" "client" {
   }
   #volumes {
    # volume_name = docker_volume.private_volume.name
-  #}
+  # }
 }
