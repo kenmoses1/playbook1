@@ -1,7 +1,7 @@
 DESCRIPTION
 
   >>Terraform
-      Terraform enables you to use infrastructure as code to provision and manage any cloud, infrastructure, or service.
+     enables you to use infrastructure as code to provision and manage any cloud, infrastructure, or service.
       this project aims to have achieve having to create instances on the cloud using terraform by having providers on place 
       thats providers.tf which enables the other .tf services,have also had to test the use of variables to simplify and make the code much neater
        to be pushed by terraform using the below commands;
