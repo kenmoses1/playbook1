@@ -10,6 +10,6 @@ resource "github_repository" "example" {
 
 resource "github_repository_collaborator" "a_repo collaborator" {
     repository = github_repository.example.name
-    username = ""
+    username = " "
     permission = "user"
 }
