@@ -15,3 +15,8 @@ variable "compute_instance_names" {
     default = [ "ansible-server",
                 "ansible-clent-one" ]
 }
+
+variable "token" {
+  type = string
+  default = "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"
+}
