@@ -7,7 +7,7 @@ services:
       - 3000:3003
     networks:
       yolo-ken-network:
-        ipv4_address: 172.20.0.3
+        ipv4_address: 172.20.0.4
   backend:
     image: "{{ backend_image }}"
     ports:
@@ -19,7 +19,7 @@ services:
       - mongo
     networks:
       yolo-ken-network:
-        ipv4_address: 172.20.0.2  
+        ipv4_address: 172.20.0.3  
   mongo:
     image: mongo
     environment:
@@ -29,11 +29,11 @@ services:
       - 27017:27017
     networks:
       yolo-ken-network:
-        ipv4_address: 172.20.0.1
+        ipv4_address: 172.20.0.2
 
 networks:
   yolo-ken-network:
     ipam:
       driver: default
       config:
-        - subnet: 172.17.0.0/16
+        - subnet: 172.17.0.1/16
