@@ -1,9 +1,19 @@
 pipeline {
   agent any
     
-    stages {
+    tools {nodejs "NodeJS"}
 
-      stage('build')
+
+
+    stages {
+      stage('Git') 
+      {
+        steps {
+          git 'https://github.com/kenmoses1/playbook1.git'
+      }
+    }
+
+      stage('Build')
       {
         steps{
           sh 'npm install'
@@ -11,14 +21,14 @@ pipeline {
     }
 
 
-      stage('test')
+      stage('Test')
       {
         steps{
             sh 'npm test'
         }
       }
 
-       stage('deploy')
+       stage('Deploy')
        {
          steps{
             echo 'deploying the applications'
