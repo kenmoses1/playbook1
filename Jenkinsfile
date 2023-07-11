@@ -5,21 +5,21 @@ pipeline {
     
     stages{
         stage("build")
-        steps{
+           steps{
             sh 'install npm'
         }
     }
 
     stages{
-        stage("test")
-        steps{
+       stage("test")
+          steps{
             sh 'test npm'
         }
     }
 
     stages{
-        stage("deploy")
-        steps{
+       stage("deploy")
+          steps{
             echo 'deploying the applications'
         }
     }
